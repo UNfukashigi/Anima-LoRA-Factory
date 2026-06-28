@@ -17,6 +17,9 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ---
 
+<code>6/28 更新（Updated）**v3**<br>
+・セットアップ時に指定されていた古いPyTorch nightly固定バージョンが取得できず、インストールに失敗する問題を修正しました。RTX 50シリーズ向けのPyTorch / torchvisionは固定日付を外し、現在配布されているnightly版へ更新する形式に変更しています。- Fixed an issue where setup failed because the old fixed PyTorch nightly versions were no longer available. For RTX 50 series GPUs, PyTorch / torchvision installation now uses the currently available nightly build without fixed date-based versions.</code>
+
 <code>5/2 更新（Updated）**v2.3**<br>
 ・英語と日本語以外の環境でエラーが発生する問題を修正しました。英語か日本語の環境であれば2.2でも問題なく利用可能です。中国語などほかの言語をご利用の場合は2.3をご利用ください。- We have fixed an issue where errors occurred in environments other than English and Japanese. Version 2.2 should work without problems in English or Japanese environments. For other languages ​​such as Chinese, please use version 2.3.</code>
 
