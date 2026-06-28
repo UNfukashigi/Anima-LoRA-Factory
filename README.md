@@ -17,6 +17,9 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ---
 
+6/29 更新（Updated）**v3.1**<br>
+・タグ編集画面に「トリガーワード追加」ボタンを追加しました。通常の「一括追加」は全画像のキャプション末尾にタグを追加し、「トリガーワード追加」は全画像のキャプション先頭にキーワードを追加するように変更しています。- Added a “Trigger Word” button to the tag editor. Normal batch add now appends tags to the end of captions for all images, while trigger word add inserts keywords at the beginning of captions for all images.
+
 <code>6/28 更新（Updated）**v3**<br>
 ・セットアップ時に指定されていた古いPyTorch nightly固定バージョンが取得できず、インストールに失敗する問題を修正しました。RTX 50シリーズ向けのPyTorch / torchvisionは固定日付を外し、現在配布されているnightly版へ更新する形式に変更しています。- Fixed an issue where setup failed because the old fixed PyTorch nightly versions were no longer available. For RTX 50 series GPUs, PyTorch / torchvision installation now uses the currently available nightly build without fixed date-based versions.</code>
 
