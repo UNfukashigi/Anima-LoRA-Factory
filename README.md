@@ -17,6 +17,13 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ---
 
+<code>6/29 更新（Updated）**v4.0**<br>
+・学習設定画面に「オプティマイザー」選択欄を追加し、AdamWに加えてProdigy / DAdaptation（学習率自動調整）を選択できるようにしました。Prodigy / DAdaptation選択時は学習率の表示が専用のヒント（推奨値1.0前後）に切り替わります。- Added an “Optimizer” selector to the training settings. In addition to AdamW, you can now choose Prodigy / DAdaptation (auto learning-rate tuning). Selecting Prodigy/DAdaptation switches the learning rate UI to a dedicated hint recommending a value around 1.0.<br>
+・上級設定に「オプティマイザー追加引数 (--optimizer_args)」の入力欄を追加しました。decouple=Trueなどの追加パラメータを任意で指定できます。- Added an “Optimizer Args (--optimizer_args)” field to the advanced settings, allowing optional extra parameters such as decouple=True to be specified.<br>
+・Prodigy / DAdaptation選択時に「低VRAM対策を強化する」チェックボックスを追加しました。有効にするとblocks_to_swap（SDXL版はキャッシュ系オプション）を追加し、VRAM消費を抑えます（学習はやや遅くなります）。- Added an “Extra low-VRAM offset” checkbox shown when Prodigy/DAdaptation is selected. Enabling it adds extra blocks_to_swap (or extra caching options on the SDXL version) to reduce VRAM usage, at the cost of slightly slower training.<br>
+・requirements.txtにdadaptation・prodigyoptを追加し、「学習環境の再構築」ボタンで自動インストールされるようにしました。また同ボタンが常に再実行可能になり、依存パッケージの追加があった場合もいつでも再インストールできるようにしました。- Added dadaptation and prodigyopt to requirements.txt so they are installed automatically via the “Repair Environment” button. The button can now always be re-run, so newly added dependencies can be reinstalled at any time.<br>
+・LoRAのランク (network_dim) ・アルファ (network_alpha) のデフォルト値を4/1から16/16に変更しました。キャラクターLoRA用途でより実用的な強さになります。- Changed the default LoRA rank (network_dim) and alpha (network_alpha) from 4/1 to 16/16, providing more practical training strength for character LoRA use cases.<br></code>
+
 <code>6/29 更新（Updated）**v3.1**<br>
 ・タグ編集画面に「トリガーワード追加」ボタンを追加しました。通常の「一括追加」は全画像のキャプション末尾にタグを追加し、「トリガーワード追加」は全画像のキャプション先頭にキーワードを追加するように変更しています。- Added a “Trigger Word” button to the tag editor. Normal batch add now appends tags to the end of captions for all images, while trigger word add inserts keywords at the beginning of captions for all images.</code><br>
 
