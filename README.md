@@ -94,3 +94,4 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 本ツールを使用して作成されたモデルや、その使用によって生じた損害について、開発者は一切の責任を負いません。 The developer is not responsible for any models created using this tool or any damage caused by its use.
 
 Created by [fukachan.jp](https://fukachan.jp/)
+X [https://x.com/UNfukashigi](https://x.com/UNfukashigi)
