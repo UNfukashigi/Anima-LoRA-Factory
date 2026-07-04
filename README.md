@@ -17,6 +17,11 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ---
 
+<code>7/5 更新（Updated）**v4.6**<br>
+・上級設定に左右反転 augmentation、タグ順シャッフル、keep_tokens、Min SNR Gamma を追加しました。各オプションは初期状態ではOFFで、必要な場合のみ有効化できます。Min SNR Gamma は数値変更に対応し、推奨値を5として案内しています。- Added Horizontal Flip Augmentation, Shuffle Caption, keep_tokens, and Min SNR Gamma to Advanced Settings. These options are off by default and can be enabled only when needed. Min SNR Gamma now supports custom values, with 5 shown as the recommended value.<br>
+・Optimizer Args の入力欄がわかりにくかったため、入力例の表示と自動保存を削除しました。過去に保存された値も起動時に自動で消去され、通常は空欄のまま利用できます。- Removed the confusing example text and auto-save behavior from Optimizer Args. Previously saved values are now cleared on startup, so the field stays blank by default.<br>
+・依存関係の不足やバージョン差によるエラー対策として、voluptuous を requirements に追加し、transformers を4系（transformers>=4.44,<5）に固定しました。これにより、新規環境でのセットアップ失敗や transformers 5系との互換性問題を避けやすくしています。- Added voluptuous to requirements and constrained transformers to version 4.x (transformers>=4.44,<5) to reduce setup failures and compatibility issues with transformers 5.x in fresh environments.</code><br>
+
 <code>6/29 更新（Updated）**v4.0**<br>
 ・学習設定画面に「オプティマイザー」選択欄を追加し、AdamWに加えてProdigy / DAdaptation（学習率自動調整）を選択できるようにしました。Prodigy / DAdaptation選択時は学習率の表示が専用のヒント（推奨値1.0前後）に切り替わります。- Added an “Optimizer” selector to the training settings. In addition to AdamW, you can now choose Prodigy / DAdaptation (auto learning-rate tuning). Selecting Prodigy/DAdaptation switches the learning rate UI to a dedicated hint recommending a value around 1.0.<br>
 ・上級設定に「オプティマイザー追加引数 (--optimizer_args)」の入力欄を追加しました。decouple=Trueなどの追加パラメータを任意で指定できます。- Added an “Optimizer Args (--optimizer_args)” field to the advanced settings, allowing optional extra parameters such as decouple=True to be specified.<br>
