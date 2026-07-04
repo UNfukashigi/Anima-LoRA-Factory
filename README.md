@@ -17,6 +17,9 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ---
 
+<code>7/5 更新（Updated）**v4.6.1**<br>
+・学習中にログ表示用のWebSocket接続が途中で切断され、画面上では学習が停止したように見える場合がある問題への対策として、サーバー側の接続維持設定を調整しました。- Adjusted the server-side connection keep-alive settings to help prevent cases where the WebSocket connection used for training logs disconnects during training, making it appear as if training has stopped on the screen.</code><br>
+
 <code>7/5 更新（Updated）**v4.6**<br>
 ・上級設定に左右反転 augmentation、タグ順シャッフル、keep_tokens、Min SNR Gamma を追加しました。各オプションは初期状態ではOFFで、必要な場合のみ有効化できます。Min SNR Gamma は数値変更に対応し、推奨値を5として案内しています。- Added Horizontal Flip Augmentation, Shuffle Caption, keep_tokens, and Min SNR Gamma to Advanced Settings. These options are off by default and can be enabled only when needed. Min SNR Gamma now supports custom values, with 5 shown as the recommended value.<br>
 ・Optimizer Args の入力欄がわかりにくかったため、入力例の表示と自動保存を削除しました。過去に保存された値も起動時に自動で消去され、通常は空欄のまま利用できます。- Removed the confusing example text and auto-save behavior from Optimizer Args. Previously saved values are now cleared on startup, so the field stays blank by default.<br>
