@@ -17,6 +17,9 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ---
 
+<code>7/6 更新（Updated）**v4.7**<br>
+・依存関係や細かいバグの修正。-Fixes for dependencies and minor bugs.</code><br>
+
 <code>7/5 更新（Updated）**v4.6.1**<br>
 ・学習中にログ表示用のWebSocket接続が途中で切断され、画面上では学習が停止したように見える場合がある問題への対策として、サーバー側の接続維持設定を調整しました。- Adjusted the server-side connection keep-alive settings to help prevent cases where the WebSocket connection used for training logs disconnects during training, making it appear as if training has stopped on the screen.</code><br>
 
