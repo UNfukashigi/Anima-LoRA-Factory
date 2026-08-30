@@ -14,11 +14,11 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ---
 
-8/31 更新（Updated）**v4.8**<br>
+<code>8/31 更新（Updated）**v4.8**<br>
 ・RepeatsをUIから設定できるようにしました。デフォルト値は2です。- Added a UI setting for Repeats. The default value is 2.<br>
 ・画像枚数 × Repeats × Epochs に基づく推定ステップ数を表示するようにしました。- Added an estimated step count based on image count × Repeats × Epochs.<br>
 ・学習の強さと総ステップ数の目安を表示する説明欄を追加しました。- Added a guide explaining training strength and recommended total step ranges.<br>
-・上級設定にDataLoader Workersを追加しました。0が最も安定し、旧バージョンと同じ挙動に近づけたい場合は8に設定できます。- Added DataLoader Workers to Advanced Settings. 0 is the most stable, and 8 is close to the previous version behavior.<br>
+・上級設定にDataLoader Workersを追加しました。0が最も安定し、旧バージョンと同じ挙動に近づけたい場合は8に設定できます。- Added DataLoader Workers to Advanced Settings. 0 is the most stable, and 8 is close to the previous version behavior.</code><br>
 
 <code>7/6 更新（Updated）**v4.7**<br>
 ・依存関係や細かいバグの修正。-Fixes for dependencies and minor bugs.</code><br>
