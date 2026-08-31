@@ -14,6 +14,72 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ---
 
+## 🌟 主な機能 / Key Features
+
+### ✅全自動環境構築 / Auto Setup
+
+start.bat を実行するだけで、必要な学習エンジン (sd-scripts) やハードウェアに最適な PyTorch を自動的にセットアップします。  
+Just run `start.bat` to automatically set up the required training engine (`sd-scripts`) and the best PyTorch version for your hardware.
+
+### ✅ビジュアルタグエディタ / Visual Tag Editor
+
+画像を見ながら直感的にキャプション（タグ）を編集可能。WD14 Tagger による自動タグ付け機能も内蔵しています。  
+Edit captions/tags intuitively while viewing your images. Built-in automatic tagging with WD14 Tagger is also included.
+
+### ✅リアルタイム進捗 / Real-time Progress
+
+学習の進捗状況をプログレスバーとブラウザのタブタイトルでリアルタイムに確認できます。  
+Check training progress in real time through the progress bar and the browser tab title.
+
+### ✅Blackwell (RTX 50) 対応 / Blackwell Ready
+
+最新GPUで発生しがちな CUDA エラーを自動検知し、最適な環境（CUDA 13.0 等）を構成します。  
+Automatically detects common CUDA issues on the latest GPUs and configures an optimized environment, such as CUDA 13.0.
+
+### ✅自動シャットダウン / Auto Shutdown
+
+長時間の学習完了後に PC を自動でシャットダウンするオプションを搭載。  
+Includes an option to automatically shut down your PC after long training sessions finish.
+
+### ✅ComfyUI 変換機能 / ComfyUI Conversion
+
+学習完了後、自動的に ComfyUI で即座に使用可能な形式へ変換・出力します。  
+After training completes, the LoRA is automatically converted and exported into a format that can be used immediately in ComfyUI.
+
+---
+
+## 📋 動作要件 / Requirements
+- **OS**: Windows 10/11
+- **GPU**: NVIDIA GPU (VRAM 8GB 以上推奨)
+- **Python**: 3.10 以上
+
+## 🚀 使い方
+1. ダウンロード: Anima-LoRA-Factory-v2.2.zipをダウンロードして解凍してください。
+1. 起動: フォルダ内の start.bat をダブルクリックします。
+1. 初期設定: 黒い画面（コマンドプロンプト）で環境構築が始まります。完了すると自動的にブラウザで GUI が開きます。
+1. 学習開始: 画像フォルダを指定し、必要に応じてタグを編集します。Anima Base Model, VAE, Qwen3 のパスを指定します。「LoRA学習開始」ボタンを押せばトレーニングが始まります！
+
+## 🚀 How to Use
+1. Download: Download Anima-LoRA-Factory-v2.2.zip.
+1. Launch: Double-click start.bat.
+1. Initialization: The terminal will automatically setup the environment. The GUI will open in your browser once ready.
+1. Start Training: Set your dataset path, configure model paths, and click "Start Training"!
+
+## 🔗 参考・クレジット / References & Credits
+このプロジェクトは、以下の素晴らしいリポジトリおよびモデルの成果に基づいています。
+
+- Anima Model: [circlestone-labs/Anima (HuggingFace)](https://huggingface.co/circlestone-labs/Anima)
+- Training Engine: [kohya-ss/sd-scripts](https://github.com/kohya-ss/sd-scripts)
+- Anima Training Docs: [sd-scripts/anima_train_network.md](https://github.com/kohya-ss/sd-scripts/blob/main/docs/anima_train_network.md)
+
+## 🔑License
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## 📝 免責事項 / Disclaimer
+本ツールを使用して作成されたモデルや、その使用によって生じた損害について、開発者は一切の責任を負いません。 The developer is not responsible for any models created using this tool or any damage caused by its use.
+
+---
+
 <code>9/1 更新（Updated）**v4.9**<br>
 ・PyTorchインストール時の参照先指定を修正しました。通常のPythonパッケージはPyPIから取得しつつ、PyTorchのCUDA版も取得できるようになり、初回セットアップや環境修復がより安定します。- Fixed the PyTorch install index setting. Setup now uses PyPI for normal Python packages while also checking the PyTorch CUDA wheel index, improving first-time setup and repair stability.</code><br>
 
@@ -65,57 +131,13 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ---
 
-<code>Further modifications have been made so that the following people can also use it.
-People using an NVIDIA GPU that is not the latest model.
-People who already have the CPU version of PyTorch installed on their PC.
-People whose torchvision has mysteriously disappeared.
-People who do not have a GPU (or have an AMD/Intel GPU).</code>
+Further modifications have been made so that the following people can also use it.<br>
+People using an NVIDIA GPU that is not the latest model.<br>
+People who already have the CPU version of PyTorch installed on their PC.<br>
+People whose torchvision has mysteriously disappeared.<br>
+People who do not have a GPU (or have an AMD/Intel GPU).<br>
 
 ---
-
-## 🌟 主な機能 / Key Features
-### ✅全自動環境構築 / Auto Setup
-start.bat を実行するだけで、必要な学習エンジン (sd-scripts) やハードウェアに最適な PyTorch を自動的にセットアップします。
-### ✅ビジュアルタグエディタ / Visual Tag Editor
-画像を見ながら直感的にキャプション（タグ）を編集可能。WD14 Tagger による自動タグ付け機能も内蔵しています。
-### ✅リアルタイム進捗 / Real-time Progress
-学習の進捗状況をプログレスバーとブラウザのタブタイトルでリアルタイムに確認できます。
-### ✅Blackwell (RTX 50) 対応 / Blackwell Ready
-最新GPUで発生しがちな CUDA エラーを自動検知し、最適な環境（CUDA 13.0 等）を構成します。
-### ✅自動シャットダウン / Auto Shutdown
-長時間の学習完了後に PC を自動でシャットダウンするオプションを搭載。
-### ✅ComfyUI 変換機能 / ComfyUI Conversion
-学習完了後、自動的に ComfyUI で即座に使用可能な形式へ変換・出力します。
-
-## 📋 動作要件 / Requirements
-- **OS**: Windows 10/11
-- **GPU**: NVIDIA GPU (VRAM 8GB 以上推奨)
-- **Python**: 3.10 以上
-
-## 🚀 使い方
-1. ダウンロード: Anima-LoRA-Factory-v2.2.zipをダウンロードして解凍してください。
-1. 起動: フォルダ内の start.bat をダブルクリックします。
-1. 初期設定: 黒い画面（コマンドプロンプト）で環境構築が始まります。完了すると自動的にブラウザで GUI が開きます。
-1. 学習開始: 画像フォルダを指定し、必要に応じてタグを編集します。Anima Base Model, VAE, Qwen3 のパスを指定します。「LoRA学習開始」ボタンを押せばトレーニングが始まります！
-
-## 🚀 How to Use
-1. Download: Download Anima-LoRA-Factory-v2.2.zip.
-1. Launch: Double-click start.bat.
-1. Initialization: The terminal will automatically setup the environment. The GUI will open in your browser once ready.
-1. Start Training: Set your dataset path, configure model paths, and click "Start Training"!
-
-## 🔗 参考・クレジット / References & Credits
-このプロジェクトは、以下の素晴らしいリポジトリおよびモデルの成果に基づいています。
-
-- Anima Model: [circlestone-labs/Anima (HuggingFace)](https://huggingface.co/circlestone-labs/Anima)
-- Training Engine: [kohya-ss/sd-scripts](https://github.com/kohya-ss/sd-scripts)
-- Anima Training Docs: [sd-scripts/anima_train_network.md](https://github.com/kohya-ss/sd-scripts/blob/main/docs/anima_train_network.md)
-
-## 🔑License
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
-## 📝 免責事項 / Disclaimer
-本ツールを使用して作成されたモデルや、その使用によって生じた損害について、開発者は一切の責任を負いません。 The developer is not responsible for any models created using this tool or any damage caused by its use.
 
 Created by [fukachan.jp](https://fukachan.jp/)<br>
 
