@@ -14,6 +14,9 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ---
 
+<code>9/1 更新（Updated）**v4.9**<br>
+・PyTorchインストール時の参照先指定を修正しました。通常のPythonパッケージはPyPIから取得しつつ、PyTorchのCUDA版も取得できるようになり、初回セットアップや環境修復がより安定します。- Fixed the PyTorch install index setting. Setup now uses PyPI for normal Python packages while also checking the PyTorch CUDA wheel index, improving first-time setup and repair stability.</code><br>
+
 <code>8/31 更新（Updated）**v4.8**<br>
 ・RepeatsをUIから設定できるようにしました。デフォルト値は2です。- Added a UI setting for Repeats. The default value is 2.<br>
 ・画像枚数 × Repeats × Epochs に基づく推定ステップ数を表示するようにしました。- Added an estimated step count based on image count × Repeats × Epochs.<br>
