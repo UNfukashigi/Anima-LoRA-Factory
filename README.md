@@ -23,8 +23,8 @@ Just run `start.bat` to automatically set up the required training engine (`sd-s
 
 ### ✅ビジュアルタグエディタ / Visual Tag Editor
 
-画像を見ながら直感的にキャプション（タグ）を編集可能。WD14 Tagger による自動タグ付け機能も内蔵しています。  
-Edit captions/tags intuitively while viewing your images. Built-in automatic tagging with WD14 Tagger is also included.
+画像を見ながら直感的にキャプション（タグ）を編集可能。WD14 Tagger による自動タグ付け機能も内蔵しています。 トリガーワードも簡単に追加できます。 
+Edit captions/tags intuitively while viewing your images. Built-in automatic tagging with WD14 Tagger is also included.Trigger words can also be easily added.
 
 ### ✅リアルタイム進捗 / Real-time Progress
 
