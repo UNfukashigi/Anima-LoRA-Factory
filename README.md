@@ -80,6 +80,10 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ---
 
+<code>9/2 更新（Updated）**v5.0**<br>
+・学習履歴機能を追加しました。直近30回分の素材フォルダ、設定内容、推定ステップ数、@付きトリガーワードを確認できます。- Added training history. You can view the last 30 runs, including dataset path, settings, estimated steps, and @ trigger words.<br>
+・セットアップ時の依存関係チェックを改善しました。必要なライブラリのインストールに失敗した場合、起動前にエラーが分かるようになりました。- Improved dependency checks during setup. If required libraries fail to install, the error is shown before launching the app.</code><br>
+
 <code>9/1 更新（Updated）**v4.9**<br>
 ・PyTorchインストール時の参照先指定を修正しました。通常のPythonパッケージはPyPIから取得しつつ、PyTorchのCUDA版も取得できるようになり、初回セットアップや環境修復がより安定します。- Fixed the PyTorch install index setting. Setup now uses PyPI for normal Python packages while also checking the PyTorch CUDA wheel index, improving first-time setup and repair stability.</code><br>
 
