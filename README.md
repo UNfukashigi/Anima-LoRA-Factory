@@ -18,32 +18,32 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ### ✅全自動環境構築 / Auto Setup
 
-start.bat を実行するだけで、必要な学習エンジン (sd-scripts) やハードウェアに最適な PyTorch を自動的にセットアップします。  
+start.bat を実行するだけで、必要な学習エンジン (sd-scripts) やハードウェアに最適な PyTorch を自動的にセットアップします。<br>
 Just run `start.bat` to automatically set up the required training engine (`sd-scripts`) and the best PyTorch version for your hardware.
 
 ### ✅ビジュアルタグエディタ / Visual Tag Editor
 
-画像を見ながら直感的にキャプション（タグ）を編集可能。WD14 Tagger による自動タグ付け機能も内蔵しています。 トリガーワードも簡単に追加できます。 
+画像を見ながら直感的にキャプション（タグ）を編集可能。WD14 Tagger による自動タグ付け機能も内蔵しています。 トリガーワードも簡単に追加できます。<br>
 Edit captions/tags intuitively while viewing your images. Built-in automatic tagging with WD14 Tagger is also included.Trigger words can also be easily added.
 
 ### ✅リアルタイム進捗 / Real-time Progress
 
-学習の進捗状況をプログレスバーとブラウザのタブタイトルでリアルタイムに確認できます。  
+学習の進捗状況をプログレスバーとブラウザのタブタイトルでリアルタイムに確認できます。<br>
 Check training progress in real time through the progress bar and the browser tab title.
 
 ### ✅学習履歴 / Training History
 
-過去の学習設定を自動で保存し、あとから確認できます。素材フォルダ、推定ステップ数、主要な学習設定、@付きトリガーワードなどを直近30件まで記録します。  
+過去の学習設定を自動で保存し、あとから確認できます。素材フォルダ、推定ステップ数、主要な学習設定、@付きトリガーワードなどを直近30件まで記録します。<br>
 Automatically saves past training settings so you can review them later. It records up to the latest 30 runs, including dataset folder, estimated steps, key training settings, and @ trigger words.
 
 ### ✅Blackwell (RTX 50) 対応 / Blackwell Ready
 
-最新GPUで発生しがちな CUDA エラーを自動検知し、最適な環境（CUDA 13.0 等）を構成します。  
+最新GPUで発生しがちな CUDA エラーを自動検知し、最適な環境（CUDA 13.0 等）を構成します。<br>
 Automatically detects common CUDA issues on the latest GPUs and configures an optimized environment, such as CUDA 13.0.
 
 ### ✅自動シャットダウン / Auto Shutdown
 
-長時間の学習完了後に PC を自動でシャットダウンするオプションを搭載。  
+長時間の学習完了後に PC を自動でシャットダウンするオプションを搭載。<br>
 Includes an option to automatically shut down your PC after long training sessions finish.
 
 ### ✅ComfyUI 変換機能 / ComfyUI Conversion
