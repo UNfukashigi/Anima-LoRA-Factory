@@ -59,13 +59,13 @@ After training completes, the LoRA is automatically converted and exported into 
 - **Python**: 3.10 以上
 
 ## 🚀 使い方
-1. ダウンロード: Anima-LoRA-Factory-v2.2.zipをダウンロードして解凍してください。
+1. ダウンロード: Anima-LoRA-Factory-v*.zipをダウンロードして解凍してください。
 1. 起動: フォルダ内の start.bat をダブルクリックします。
 1. 初期設定: 黒い画面（コマンドプロンプト）で環境構築が始まります。完了すると自動的にブラウザで GUI が開きます。
 1. 学習開始: 画像フォルダを指定し、必要に応じてタグを編集します。Anima Base Model, VAE, Qwen3 のパスを指定します。「LoRA学習開始」ボタンを押せばトレーニングが始まります！
 
 ## 🚀 How to Use
-1. Download: Download Anima-LoRA-Factory-v2.2.zip.
+1. Download: Download Anima-LoRA-Factory-v*.zip.
 1. Launch: Double-click start.bat.
 1. Initialization: The terminal will automatically setup the environment. The GUI will open in your browser once ready.
 1. Start Training: Set your dataset path, configure model paths, and click "Start Training"!
