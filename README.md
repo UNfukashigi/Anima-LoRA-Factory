@@ -31,6 +31,11 @@ Edit captions/tags intuitively while viewing your images. Built-in automatic tag
 学習の進捗状況をプログレスバーとブラウザのタブタイトルでリアルタイムに確認できます。  
 Check training progress in real time through the progress bar and the browser tab title.
 
+### ✅学習履歴 / Training History
+
+過去の学習設定を自動で保存し、あとから確認できます。素材フォルダ、推定ステップ数、主要な学習設定、@付きトリガーワードなどを直近30件まで記録します。  
+Automatically saves past training settings so you can review them later. It records up to the latest 30 runs, including dataset folder, estimated steps, key training settings, and @ trigger words.
+
 ### ✅Blackwell (RTX 50) 対応 / Blackwell Ready
 
 最新GPUで発生しがちな CUDA エラーを自動検知し、最適な環境（CUDA 13.0 等）を構成します。  
