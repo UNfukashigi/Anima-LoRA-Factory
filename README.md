@@ -85,6 +85,12 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ---
 
+<code>9/2 更新（Updated）v5.1<br>
+・セットアップ時の依存関係を見直し、環境によってstringzillaのビルドに失敗する問題を修正しました。- Revised setup dependencies and fixed an issue where stringzilla could fail to build on some environments.<br>
+・GPUに応じたCUDA対応版PyTorchを確実に導入するよう改善しました。RTX 40系以前にはCUDA 12.1版、RTX 50系にはCUDA 13.0版を使用します。- Improved setup to reliably install the correct CUDA-enabled PyTorch version for each GPU. CUDA 12.1 is used for RTX 40 series and earlier, while CUDA 13.0 is used for RTX 50 series.<br>
+・PyTorchがCPU動作になり、学習が0%から進まない問題を修正しました。セットアップ後と学習開始前にGPUの利用可否を確認します。- Fixed an issue where training remained at 0% because PyTorch was running on the CPU. GPU availability is now verified after setup and before training starts.<br>
+・主要な依存パッケージのバージョンを固定し、新規セットアップの安定性を改善しました。- Pinned key dependency versions to improve the stability of fresh installations.</code><br>
+
 <code>9/2 更新（Updated）**v5.0**<br>
 ・学習履歴機能を追加しました。直近30回分の素材フォルダ、設定内容、推定ステップ数、@付きトリガーワードを確認できます。- Added training history. You can view the last 30 runs, including dataset path, settings, estimated steps, and @ trigger words.<br>
 ・セットアップ時の依存関係チェックを改善しました。必要なライブラリのインストールに失敗した場合、起動前にエラーが分かるようになりました。- Improved dependency checks during setup. If required libraries fail to install, the error is shown before launching the app.</code><br>
