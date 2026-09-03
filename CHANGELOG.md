@@ -1,0 +1,81 @@
+# Changelog / 更新履歴
+
+Anima LoRA Factory の更新履歴です。  
+Version history for Anima LoRA Factory.
+
+v4.7以降の詳細な更新内容と各バージョンのダウンロードについては、[Releases](https://github.com/UNfukashigi/Anima-LoRA-Factory/releases) をご覧ください。  
+For detailed release notes and downloads for v4.7 and later, see [Releases](https://github.com/UNfukashigi/Anima-LoRA-Factory/releases).
+
+---
+
+## v4.6.1 — 7/5
+
+- 学習中にログ表示用のWebSocket接続が途中で切断され、画面上では学習が停止したように見える場合がある問題への対策として、サーバー側の接続維持設定を調整しました。  
+  Adjusted the server-side connection keep-alive settings to help prevent cases where the WebSocket connection used for training logs disconnects during training, making it appear as if training has stopped on the screen.
+
+## v4.6 — 7/5
+
+- 上級設定に左右反転 augmentation、タグ順シャッフル、keep_tokens、Min SNR Gamma を追加しました。各オプションは初期状態ではOFFで、必要な場合のみ有効化できます。Min SNR Gamma は数値変更に対応し、推奨値を5として案内しています。  
+  Added Horizontal Flip Augmentation, Shuffle Caption, keep_tokens, and Min SNR Gamma to Advanced Settings. These options are off by default and can be enabled only when needed. Min SNR Gamma now supports custom values, with 5 shown as the recommended value.
+
+- Optimizer Args の入力欄がわかりにくかったため、入力例の表示と自動保存を削除しました。過去に保存された値も起動時に自動で消去され、通常は空欄のまま利用できます。  
+  Removed the confusing example text and auto-save behavior from Optimizer Args. Previously saved values are now cleared on startup, so the field stays blank by default.
+
+- 依存関係の不足やバージョン差によるエラー対策として、voluptuous を requirements に追加し、transformers を4系（transformers>=4.44,<5）に固定しました。これにより、新規環境でのセットアップ失敗や transformers 5系との互換性問題を避けやすくしています。  
+  Added voluptuous to requirements and constrained transformers to version 4.x (`transformers>=4.44,<5`) to reduce setup failures and compatibility issues with transformers 5.x in fresh environments.
+
+## v4.0 — 6/29
+
+- 学習設定画面に「オプティマイザー」選択欄を追加し、AdamWに加えてProdigy / DAdaptation（学習率自動調整）を選択できるようにしました。Prodigy / DAdaptation選択時は学習率の表示が専用のヒント（推奨値1.0前後）に切り替わります。  
+  Added an “Optimizer” selector to the training settings. In addition to AdamW, you can now choose Prodigy / DAdaptation (auto learning-rate tuning). Selecting Prodigy/DAdaptation switches the learning rate UI to a dedicated hint recommending a value around 1.0.
+
+- 上級設定に「オプティマイザー追加引数 (`--optimizer_args`)」の入力欄を追加しました。`decouple=True` などの追加パラメータを任意で指定できます。  
+  Added an “Optimizer Args (`--optimizer_args`)” field to the advanced settings, allowing optional extra parameters such as `decouple=True` to be specified.
+
+- Prodigy / DAdaptation選択時に「低VRAM対策を強化する」チェックボックスを追加しました。有効にするとblocks_to_swap（SDXL版はキャッシュ系オプション）を追加し、VRAM消費を抑えます（学習はやや遅くなります）。  
+  Added an “Extra low-VRAM offset” checkbox shown when Prodigy/DAdaptation is selected. Enabling it adds extra blocks_to_swap (or extra caching options on the SDXL version) to reduce VRAM usage, at the cost of slightly slower training.
+
+- `requirements.txt` にdadaptation・prodigyoptを追加し、「学習環境の再構築」ボタンで自動インストールされるようにしました。また同ボタンが常に再実行可能になり、依存パッケージの追加があった場合もいつでも再インストールできるようにしました。  
+  Added dadaptation and prodigyopt to `requirements.txt` so they are installed automatically via the “Repair Environment” button. The button can now always be re-run, so newly added dependencies can be reinstalled at any time.
+
+- LoRAのランク (`network_dim`)・アルファ (`network_alpha`) のデフォルト値を4/1から16/16に変更しました。キャラクターLoRA用途でより実用的な強さになります。  
+  Changed the default LoRA rank (`network_dim`) and alpha (`network_alpha`) from 4/1 to 16/16, providing more practical training strength for character LoRA use cases.
+
+## v3.1 — 6/29
+
+- タグ編集画面に「トリガーワード追加」ボタンを追加しました。通常の「一括追加」は全画像のキャプション末尾にタグを追加し、「トリガーワード追加」は全画像のキャプション先頭にキーワードを追加するように変更しています。  
+  Added a “Trigger Word” button to the tag editor. Normal batch add now appends tags to the end of captions for all images, while trigger word add inserts keywords at the beginning of captions for all images.
+
+- `start.bat` 内の `APP_PORT` を編集することで、GUIのポート番号をユーザーが自由に変更できるようにしました。  
+  Added an `APP_PORT` setting in `start.bat`, allowing users to change the GUI port number freely.
+
+## v3 — 6/28
+
+- セットアップ時に指定されていた古いPyTorch nightly固定バージョンが取得できず、インストールに失敗する問題を修正しました。RTX 50シリーズ向けのPyTorch / torchvisionは固定日付を外し、現在配布されているnightly版へ更新する形式に変更しています。  
+  Fixed an issue where setup failed because the old fixed PyTorch nightly versions were no longer available. For RTX 50 series GPUs, PyTorch / torchvision installation now uses the currently available nightly build without fixed date-based versions.
+
+## v2.3 — 5/2
+
+- 英語と日本語以外の環境でエラーが発生する問題を修正しました。英語か日本語の環境であれば2.2でも問題なく利用可能です。中国語などほかの言語をご利用の場合は2.3をご利用ください。  
+  Fixed an issue where errors occurred in environments other than English and Japanese. Version 2.2 should work without problems in English or Japanese environments. For other languages such as Chinese, please use version 2.3.
+
+## v2.2 — 4/26
+
+- エラー報告の多かった原因のsd-scriptsを同梱しました。ZIP形式での配布に変更。Gitは不要になりました。  
+  Included sd-scripts, which were the cause of many error reports. Distribution format was changed to ZIP, so Git is no longer required.
+
+## v2.1 — 4/26
+
+- エラー報告の多かった原因として、PCのグローバル環境で環境変数PYTHONPATHが設定されている場合について、必ずvenv環境のPythonを利用するように更新しました。  
+  Updated the tool to always use Python from the venv environment when the `PYTHONPATH` environment variable is set in the PC's global environment.
+
+## Early Update — 4/25
+
+- venv環境をツール内に構築する設計にしました。グローバル環境に影響を与えず、より安心してご利用頂けます。  
+  The design now incorporates a venv environment within the tool. This ensures that it does not affect the global environment and can be used with greater peace of mind.
+
+- より安定して使えるようにモジュールチェック機能を強化し、自動インストールの機能も強化しました。  
+  The module check function has been enhanced for greater stability, and the automatic installation function has also been improved.
+
+- Anima版とSDXL版でURL（ポート番号）を分けました。キャッシュが被らないので表示も安定するはずです。  
+  Separated the URLs (port numbers) for the Anima and SDXL versions to prevent cache conflicts and improve display stability.
