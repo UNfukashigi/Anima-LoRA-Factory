@@ -76,6 +76,22 @@ After training completes, the LoRA is automatically converted and exported into 
 
 ---
 
+### 🔧 必要モデル / Required Models
+
+- **Anima Base Model**
+  - `anima-base-v1.0.safetensors`
+  - https://huggingface.co/circlestone-labs/Anima/blob/main/split_files/diffusion_models/anima-base-v1.0.safetensors
+
+- **Qwen3 Text Encoder**
+  - `qwen_3_06b_base.safetensors`
+  - https://huggingface.co/circlestone-labs/Anima/blob/main/split_files/text_encoders/qwen_3_06b_base.safetensors
+
+- **Qwen Image VAE**
+  - `qwen_image_vae.safetensors`
+  - https://huggingface.co/circlestone-labs/Anima/blob/main/split_files/vae/qwen_image_vae.safetensors
+
+---
+
 ## 📝 更新履歴 / Version History
 
 v4.7以降の更新内容は **Releases**、それ以前の更新履歴は **CHANGELOG.md** をご覧ください。  
