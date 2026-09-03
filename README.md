@@ -8,14 +8,7 @@ Anima LoRA Factory は、次世代画像生成モデル Anima の LoRA 学習を
 
 ## 📥 ダウンロード / Download
 
-最新版はこちらからダウンロードできます。
-Download the latest version from the link below.
-
 👉 **[最新版をダウンロード / Download Latest Release](https://github.com/UNfukashigi/Anima-LoRA-Factory/releases/latest)**
-
-Releaseページを開き、**Assets** から `Anima-LoRA-Factory-v*.zip` をダウンロードしてください。
-
-> Open the Release page and download `Anima-LoRA-Factory-v*.zip` from **Assets**.
 
 ▼SDXLバージョンも公開しています。- SDXL version is also available.<br>
 [https://github.com/UNfukashigi/SDXL-LoRA-Factory](https://github.com/UNfukashigi/SDXL-LoRA-Factory)
