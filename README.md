@@ -74,19 +74,6 @@ After training completes, the LoRA is automatically converted and exported into 
 1. Initialization: The terminal will automatically setup the environment. The GUI will open in your browser once ready.
 1. Start Training: Set your dataset path, configure model paths, and click "Start Training"!
 
-## 🔗 参考・クレジット / References & Credits
-このプロジェクトは、以下の素晴らしいリポジトリおよびモデルの成果に基づいています。
-
-- Anima Model: [circlestone-labs/Anima (HuggingFace)](https://huggingface.co/circlestone-labs/Anima)
-- Training Engine: [kohya-ss/sd-scripts](https://github.com/kohya-ss/sd-scripts)
-- Anima Training Docs: [sd-scripts/anima_train_network.md](https://github.com/kohya-ss/sd-scripts/blob/main/docs/anima_train_network.md)
-
-## 🔑License
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
-## 📝 免責事項 / Disclaimer
-本ツールを使用して作成されたモデルや、その使用によって生じた損害について、開発者は一切の責任を負いません。 The developer is not responsible for any models created using this tool or any damage caused by its use.
-
 ---
 
 ## 📝 更新履歴 / Version History
@@ -99,11 +86,18 @@ For version history, see **Releases** for v4.7 and later, and **CHANGELOG.md** f
 
 ---
 
-Further modifications have been made so that the following people can also use it.<br>
-People using an NVIDIA GPU that is not the latest model.<br>
-People who already have the CPU version of PyTorch installed on their PC.<br>
-People whose torchvision has mysteriously disappeared.<br>
-People who do not have a GPU (or have an AMD/Intel GPU).<br>
+## 🔗 参考・クレジット / References & Credits
+このプロジェクトは、以下の素晴らしいリポジトリおよびモデルの成果に基づいています。
+
+- Anima Model: [circlestone-labs/Anima (HuggingFace)](https://huggingface.co/circlestone-labs/Anima)
+- Training Engine: [kohya-ss/sd-scripts](https://github.com/kohya-ss/sd-scripts)
+- Anima Training Docs: [sd-scripts/anima_train_network.md](https://github.com/kohya-ss/sd-scripts/blob/main/docs/anima_train_network.md)
+
+## 🔑License
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## 📝 免責事項 / Disclaimer
+本ツールを使用して作成されたモデルや、その使用によって生じた損害について、開発者は一切の責任を負いません。 The developer is not responsible for any models created using this tool or any damage caused by its use.
 
 ---
 
