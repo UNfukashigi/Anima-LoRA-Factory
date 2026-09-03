@@ -80,7 +80,8 @@ After training completes, the LoRA is automatically converted and exported into 
 
 - **Anima Base Model**
   - `anima-base-v1.0.safetensors`
-  - https://huggingface.co/circlestone-labs/Anima/blob/main/split_files/diffusion_models/anima-base-v1.0.safetensors
+  - https://huggingface.co/circlestone-labs/Anima/blob/main/split_files/diffusion_models/anima-base-v1.0.safetensors 
+  - 派生モデルでの学習は動作保証していません。Training with derivative models is not officially supported.
 
 - **Qwen3 Text Encoder**
   - `qwen_3_06b_base.safetensors`
