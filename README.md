@@ -58,9 +58,13 @@ After training completes, the LoRA is automatically converted and exported into 
 ---
 
 ## 📋 動作要件 / Requirements
-- **OS**: Windows 10/11
-- **GPU**: NVIDIA GPU (VRAM 8GB 以上推奨)
-- **Python**: 3.10 以上
+- Windows 10 / 11 64bit
+- NVIDIA GPU
+- Python 3.10.6 64bit 推奨  
+  Recommended: Python 3.10.6 64bit  
+  https://www.python.org/downloads/release/python-3106/
+
+※ Pythonインストール時は「Add Python to PATH」にチェックを入れてください。
 
 ## 🚀 使い方
 1. ダウンロード: Anima-LoRA-Factory-v*.zipをダウンロードして解凍してください。
